@@ -2,26 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.human-body {
+	width: 207px;
+	position: relative;
+	padding-top: 240px;
+	height: 500px;
+	display: block;
+	margin: 40px auto;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.human-body svg:hover {
+	cursor: pointer;
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.human-body svg:hover path {
+	fill: #57c9d5;
+}
+.human-body svg {
+	position: absolute;
+	left: 50%;
+	fill: #ccc;
+}
+.human-body svg.head {
+	margin-left: -28.5px;
+	top: -6px;
+}
+.human-body svg.shoulder {
+	margin-left: -53.5px;
+	top: 69px;
+}
+.human-body svg.arm {
+	margin-left: -78px;
+	top: 112px;
+}
+.human-body svg.chest {
+	margin-left: -43.5px;
+	top: 88px;
+}
+.human-body svg.stomach {
+	margin-left: -37.5px;
+	top: 130px;
+}
+.human-body svg.legs {
+	margin-left: -46.5px;
+	top: 205px;
+	z-index: 9999;
+}
+.human-body svg.hands {
+	margin-left: -102.5px;
+	top: 224px;
 }
